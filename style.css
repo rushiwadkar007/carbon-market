@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 :root {
-  --clr-primary: #7380ec;
+  --clr-primary: #194d9c;
   --clr-danger: #ff7782;
   --clr-success: #41f1b6;
   --clr-white: #ffffff;
@@ -9,7 +9,7 @@
   --clr-dark: #363949;
   --clr-warning: #ff4edc;
   --clr-light: rgba(132, 139, 200, 0.18);
-  --clr-primary-variant: #111e88;
+  --clr-primary-variant: #194d9c;
   --clr-dark-variant: #677483;
   --clr-color-background: #f6f6f9;
   --card-border-radius: 2rem;
@@ -46,146 +46,443 @@ body {
   width: 96%;
   gap: 1.8rem;
   grid-template-columns: 14rem auto 14rem;
-  margin: 0 auto
+  margin: 0 auto;
+  justify-content: space-between;
+}
+main nav{
+  position: fixed;
+  margin-left: 30px;
+  width: 82.5%;
+}
+main nav .nav-menu {
+  border-color: var(--clr-primary);
+  background-color: var(--clr-info-light);
+  border-radius: 10px;
+  margin-top: 5px;
+  width: 97%;
+}
+main nav .nav-menu h1 {
+  color: var(--clr-primary);
+  margin-left: 37px;
+  display: inline-flex;
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+main nav .nav-menu ul {
+  display: flex;
+  float: right;
+  justify-content: space-between;
+  margin-right: 10px;
+  margin-top: -2px;
+}
+main nav .nav-menu ul li {
+  display: flex;
+  float: right;
+  padding-left: 39px;
+  margin-top: 7px;
+}
+main nav .nav-menu ul li a {
+  color: var(--clr-primary);
+  font-weight: 500;
+  font-size: 20px;
+}
+main nav .nav-menu ul li span {
+  color: var(--clr-primary);
+  font-weight: 500;
+  font-size: 6vh;
+  cursor: pointer;
+}
+a {
+  color: var(--clr-dark);
 }
 
-a{
-    color: var(--clr-dark);
-
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
 }
 
-h1{
-    font-weight: 800;
-    font-size: 1.8rem;
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 0.87rem;
+}
+h4 {
+  font-size: 0.8rem;
+}
+h5 {
+  font-size: 0.77rem;
+}
+small {
+  font-size: 0.75rem;
 }
 
-h2{
-    font-size: 1.4rem;
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
-h3{
-    font-size: 0.87rem;
+.text-muted {
+  color: var(--clr-info-dark);
 }
-h4{
-    font-size: 0.8rem;
+p {
+  color: var(--clr-dark-variant);
 }
-h5{
-    font-size: 0.77rem;
+b {
+  color: var(--clr-dark);
 }
-small{
-    font-size: 0.75rem;
+.primary {
+  color: var(--clr-primary);
 }
-
-.profile-photo{
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 50%;
-    overflow: hidden;
+.success {
+  color: var(--clr-success);
 }
-.text-muted{
-    color: var(--clr-info-dark);
+.danger {
+  color: var(--clr-danger);
+  font-size: 14.8px;
 }
-p{
-    color: var(--clr-dark-variant);
-}
-b{
-    color:var(--clr-dark);
-}
-.primary{
-    color: var(--clr-primary);
-}
-.success{
-    color: var(--clr-success);
-}
-.danger{
-    color: var(--clr-danger);
-}
-.warning{
-    color: var(--clr-warning);
+.warning {
+  color: var(--clr-warning);
 }
 
 /* Aside */
-aside{
-    height: 100vh;
-    width: 35vh;
-    margin-top: 18px;
+aside {
+  height: 100vh;
+  width: 35vh;
+  margin-top: -23px;
+  margin-left: -20px;
 }
-aside .top{
-    background-color: var(--clr-white);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 1.4rem;
+aside .top {
+  position: fixed;
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.4rem;
 }
-aside .logo{
-    display: flex;
-    gap: 1rem;
+aside .logo {
+  display: flex;
+  gap: 1rem;
 }
-aside .top div.close{
-    display: none;
-}
-
-aside .sidebar{
-    background-color: var(--clr-white);
-    display: flex;
-    flex-direction: column;
-    height: 85vh;
-    position: relative;
-    top:1rem;
+aside .top div.close {
+  display: none;
 }
 
-aside h3{
-    font-weight: 400;
+aside .sidebar {
+  position: fixed;
+  margin-top: 45px;
+  background-color: #d9e4f5;
+  display: flex;
+  flex-direction: column;
+  height: 87.5vh;
+  width: 16%;
+  top: 1rem;
+  border-radius: 10px;
 }
 
-aside .sidebar a{
-    display: flex;
-    color: var(--clr-info-dark);
-    margin-left: 2rem;
-    gap: 1rem;
-    align-items: center;
-    height: 3.2rem;
-    transition:all .1s ease-in;
+aside h3 {
+  font-weight: 400;
 }
 
-aside .sidebar a span{
-    font-size: 1.6rem;
-    transition: all .1s ease-in;
+aside .sidebar a {
+  display: flex;
+  color: var(--clr-info-dark);
+  margin-left: 0.5rem;
+  gap: 1rem;
+  align-items: center;
+  height: 3.2rem;
+  transition: all 0.1s ease-in;
 }
 
-aside .sidebar a:last-child{
-    position: absolute;
-    bottom: 1rem;
-    width: 100%;
+aside .sidebar a span {
+  font-size: 1.6rem;
+  transition: all 0.1s ease-in;
 }
 
-aside .sidebar a.active{
-    background: var(--clr-light);
-    color: var(--clr-primary);
-    border-left: 5px solid var(--clr-primary)
+aside .sidebar a.active {
+  background: var(--clr-light);
+  color: var(--clr-primary);
+  border-left: 10px solid var(--clr-primary);
+  margin-left: 1px;
+  border-radius: 5px;
 }
 
-aside .sidebar a.active:before{
-    content: "";
-    width: 6px;
-    height: 100%;
-    background-color: var(--clr-primary);
+aside .top .logo .kiya {
+  color: #194d9c;
 }
 
-aside .sidebar a:hover{
-    color: var(--clr-primary);
-    transition: .4s ease;
+aside .sidebar a.active:before {
+  content: "";
+  width: 0px;
+  height: 100%;
+  background-color: #d9e4f5;
 }
 
-aside .sidebar a:hover span{
-    margin-left: 1rem;
+aside .sidebar a:hover {
+  color: var(--clr-primary);
+  transition: 0.4s ease;
 }
 
-aside .sidebar a span.msg_count{
-    background: var(--clr-danger);
-    color: var(--clr-white);
-    padding: 2px 5px;
-    font-size: 11px;
-    border-radius: var(--border-radius-1);
+aside .sidebar a:hover span {
+  margin-left: 1rem;
 }
 
+aside .sidebar a span.msg_count {
+  background: var(--clr-danger);
+  color: var(--clr-white);
+  padding: 2px 5px;
+  font-size: 11px;
+  border-radius: var(--border-radius-1);
+}
+main {
+  margin-left: -60px;
+}
 
+main .firstDiv {
+  display: inline-flex;
+  margin-top: 50px;
+}
+
+main .firstDiv .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 200px;
+  border-radius: 10px;
+  height: 100px;
+  display: inline-flex;
+  margin: 40px;
+  background-color: var(--clr-info-light);
+}
+
+main .firstDiv .card span {
+  font-size: 3rem;
+  margin: 25px;
+  margin-left: 2px;
+  color: var(--clr-primary);
+  transition: all 0.1s ease-in;
+}
+main .firstDiv .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+main .firstDiv .card .card-container {
+  padding: 2px 16px;
+  color: var(--clr-primary);
+  margin-left: -25px;
+  margin-top: 15px;
+}
+main .firstDiv .card .card-container p {
+  font-size: 1.5rem;
+  color: var(--clr-primary);
+  font-weight: bold;
+}
+
+main .table {
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 38px;
+  width: 94%;
+  margin-right: auto;
+}
+main .table .tokens-table th,
+td {
+  font-size: 1rem;
+  color: var(--clr-primary);
+  justify-content: space-around;
+  border-bottom: 1px solid var(--clr-primary);
+  background-color: var(--clr-info-light);
+  padding: 8px;
+  margin: 5px;
+  text-align: center;
+}
+
+main .table .buying-table th,
+td {
+  font-size: 1rem;
+  color: var(--clr-primary);
+  justify-content: space-around;
+  border-bottom: 1px solid var(--clr-primary);
+  background-color: var(--clr-info-light);
+  padding: 8px;
+  text-align: center;
+}
+
+main .table .users-table th,
+td {
+  font-size: 1rem;
+  color: var(--clr-primary);
+  justify-content: space-around;
+  border-bottom: 1px solid var(--clr-primary);
+  background-color: var(--clr-info-light);
+  padding: 8px;
+  text-align: center;
+}
+
+main .table .tokens-table {
+  border: 2px solid var(--clr-primary);
+  align-items: center;
+  margin-left: 0%;
+  margin-right: auto;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  width: 102%;
+}
+
+main .table .buying-table {
+  border: 2px solid var(--clr-primary);
+  align-items: center;
+  margin-left: 0%;
+  margin-right: auto;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  width: 102%;
+}
+
+main .table .users-table {
+  border: 2px solid var(--clr-primary);
+  align-items: center;
+  margin-left: 0%;
+  margin-right: auto;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  width: 102%;
+}
+
+/* pagination-dashboard */
+main .table .tokens-table .pagination {
+  display: inline-block;
+  position: relative;
+  left: 342px;
+}
+
+main .table .tokens-table .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid var(--clr-primary);
+  font-size: 22px;
+}
+
+main .table .tokens-table .pagination a.active {
+  background-color: var(--clr-primary);
+  color: white;
+  border: 1px solid var(--clr-primary);
+}
+
+main .table .tokens-table .pagination a:hover:not(.active) {
+  background-color: var(--clr-primary);
+}
+
+main .table .tokens-table .pagination {
+  display: inline-block;
+  margin: 10px;
+}
+
+main .table .tokens-table .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid var(--clr-primary);
+  font-size: 22px;
+  background-color: var(--clr-info-light);
+  border-radius: 10px;
+}
+
+main .table .tokens-table .pagination a.active {
+  background-color: var(--clr-primary);
+  color: white;
+  border: 1px solid var(--clr-primary);
+}
+
+main .table .tokens-table .pagination a:hover:not(.active) {
+  background-color: var(--clr-primary);
+}
+/* buying table */
+main .table .buying-table .pagination {
+  display: inline-block;
+  position: relative;
+  left: 342px;
+  margin: 10px;
+}
+
+main .table .buying-table .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid var(--clr-primary);
+  font-size: 22px;
+  background-color: var(--clr-info-light);
+  border-radius: 10px;
+}
+
+main .table .buying-table .pagination a.active {
+  background-color: var(--clr-primary);
+  color: white;
+  border: 1px solid var(--clr-primary);
+}
+
+main .table .buying-table .pagination a:hover:not(.active) {
+  background-color: var(--clr-primary);
+}
+
+/* users table */
+main .table .users-table .pagination {
+  display: inline-block;
+  position: relative;
+  left: 342px;
+  margin: 10px;
+}
+
+main .table .users-table .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid var(--clr-primary);
+  font-size: 22px;
+  background-color: var(--clr-info-light);
+  border-radius: 10px;
+}
+
+main .table .users-table .pagination a.active {
+  background-color: var(--clr-primary);
+  color: white;
+  border: 1px solid var(--clr-primary);
+}
+
+main .table .users-table .pagination a:hover:not(.active) {
+  background-color: var(--clr-primary);
+}
+/* pagination dashboard end */
+
+main .table .tokens-table h4 {
+  margin-left: 37%;
+  align-items: center;
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+}
+
+main .table .buying-table h4 {
+  margin-left: 37%;
+  align-items: center;
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+}
+
+main .table .users-table h4 {
+  margin-left: 37%;
+  align-items: center;
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+}
