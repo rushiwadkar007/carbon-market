@@ -11,7 +11,7 @@ const Sidebar = () => {
         <div className="top">
           <div className="logo">
             <h2 className="kiya">
-              KIYA <span className="danger">CARBON EXCHANGE(C&T) </span>
+              KIYA's <span className="danger">CARBON EXCHANGE(C&T) </span>
             </h2>
           </div>
           <div className="close">
@@ -29,6 +29,13 @@ const Sidebar = () => {
           >
             <span className="material-symbols-outlined"> store </span>
             <h3>MARKETPLACE</h3>
+          </Link>
+          <Link
+            to="/marketplace"
+            className={splitLocation[1] === "marketplace" ? "active" : ""}
+          >
+            <span class="material-symbols-outlined">matter</span>
+            <h3>SECONDARY MARKETPLACE</h3>
           </Link>
           <Link
             to="/carbon-products"
@@ -85,7 +92,7 @@ const Sidebar = () => {
             className={splitLocation[1] === "reports" ? "active" : ""}
           >
             <span className="material-symbols-sharp"> report </span>
-            <h3>REPORTS</h3>
+            <h3>CARBON REPORTS</h3>
           </Link>
           <Link
             to="/carbon-calculator"

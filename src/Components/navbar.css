@@ -68,7 +68,7 @@ nav .nav-menu ul li a:hover{
 }
 
 nav .nav-menu ul li span:hover{
-  color: var(--clr-dark);
+  color: var(--clr-info-light);
   font-weight: 500;
   font-size: 6vh;
   cursor: pointer;
@@ -79,4 +79,6 @@ nav .nav-menu ul li span {
   font-weight: 500;
   font-size: 6vh;
   cursor: pointer;
+  background-color: var(--clr-info-dark);
+  border-radius: 25px;
 }
