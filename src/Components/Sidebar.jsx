@@ -31,8 +31,8 @@ const Sidebar = () => {
             <h3>MARKETPLACE</h3>
           </Link>
           <Link
-            to="/marketplace"
-            className={splitLocation[1] === "marketplace" ? "active" : ""}
+            to="/secondary-marketplace"
+            className={splitLocation[1] === "secondary-marketplace" ? "active" : ""}
           >
             <span class="material-symbols-outlined">matter</span>
             <h3>SECONDARY MARKETPLACE</h3>
@@ -43,6 +43,13 @@ const Sidebar = () => {
           >
             <span className="material-symbols-sharp"> receipt_long </span>
             <h3>CARBON PRODUCTS</h3>
+          </Link>
+          <Link
+            to="/reports"
+            className={splitLocation[1] === "reports" ? "active" : ""}
+          >
+            <span className="material-symbols-sharp"> report </span>
+            <h3>CARBON REPORTS</h3>
           </Link>
           <Link
             to="/carbon-products-list"
@@ -86,13 +93,6 @@ const Sidebar = () => {
               data_exploration{" "}
             </span>
             <h3>TRANS. EXPLORER</h3>
-          </Link>
-          <Link
-            to="/reports"
-            className={splitLocation[1] === "reports" ? "active" : ""}
-          >
-            <span className="material-symbols-sharp"> report </span>
-            <h3>CARBON REPORTS</h3>
           </Link>
           <Link
             to="/carbon-calculator"

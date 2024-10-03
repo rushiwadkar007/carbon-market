@@ -19,6 +19,7 @@
   --card-padding: 1.8rem;
   --padding-1: 1.2rem;
   --box-shadow: 0.2rem 3 rem var(--clr-ligth);
+  --clr-btn: #83B1E1;
 }
 
 * {
@@ -45,7 +46,6 @@ body {
   grid-template-columns: 14rem auto 14rem;
   width: 96%;
   gap: 1.8rem;
-  grid-template-columns: 14rem auto 14rem;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -87,7 +87,7 @@ main nav .nav-menu ul li a {
   font-size: 20px;
 }
 main nav .nav-menu ul li span {
-  color: var(--clr-primary);
+  color: var(--clr-btn);
   font-weight: 500;
   font-size: 6vh;
   cursor: pointer;
@@ -171,11 +171,11 @@ aside .top div.close {
 
 aside .sidebar {
   position: fixed;
-  margin-top: 45px;
+  margin-top: 62px;
   background-color: #d9e4f5;
   display: flex;
   flex-direction: column;
-  height: 88vh;
+  height: 85vh;
   width: 16%;
   top: 1rem;
   border-radius: 10px;
@@ -183,6 +183,7 @@ aside .sidebar {
 
 aside h3 {
   font-weight: 400;
+  margin-left: 0px;
 }
 
 aside .sidebar a {
@@ -198,6 +199,7 @@ aside .sidebar a {
 aside .sidebar a span {
   font-size: 1.6rem;
   transition: all 0.1s ease-in;
+  margin-top: 3px;
 }
 
 aside .sidebar a.active {
@@ -222,10 +224,12 @@ aside .sidebar a.active:before {
 aside .sidebar a:hover {
   color: var(--clr-primary);
   transition: 0.4s ease;
+  margin-left: 5px;
 }
 
 aside .sidebar a:hover span {
   margin-left: 1rem;
+  margin-left: 5px;
 }
 
 aside .sidebar a span.msg_count {
