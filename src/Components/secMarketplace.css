@@ -1,0 +1,160 @@
+:root {
+  --clr-primary: #1c7bf8;
+  --clr-danger: #ff7782;
+  --clr-success: #41f1b6;
+  --clr-white: #ffffff;
+  --clr-info-dark: #7d8da1;
+  --clr-info-light: #dce1eb;
+  --clr-dark: #363949;
+  --clr-warning: #ff4edc;
+  --clr-light: rgba(132, 139, 200, 0.18);
+  --clr-primary-variant: #194d9c;
+  --clr-dark-variant: #677483;
+  --clr-color-background: #f6f6f9;
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --clr-success-1: #0f8506;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0.2rem 3 rem var(--clr-ligth);
+  --clr-btn: #83b1e1;
+}
+.sec-marketplace {
+  margin-top: -133px;
+  width: 200%;
+  height: 80%;
+  margin-left: -15%;
+  float: right;
+  border-radius: 25px;
+  justify-content: left;
+  align-items: center;
+  display: inline-grid;
+}
+
+.sec-marketplace .newly-issued {
+  margin-left: 0px;
+  height: 10px;
+  width: 100%;
+  /* float: right; */
+  margin-left: 2%;
+  width: 100%;
+  margin-top: -3px;
+  border-radius: 13px;
+}
+.sec-marketplace .newly-issued h1 {
+  color: var(--clr-primary);
+  margin-left: -11px;
+}
+.sec-marketplace .newly-issued .cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
+  width: 159%;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 var(--clr-primary);
+  border: 1px solid var(--clr-primary);
+}
+.sec-marketplace .newly-issued .cards .card {
+  background-color: var(--clr-info-light);
+  border-radius: 8px;
+  margin-left: 0px;
+  width: 164px;
+  height: 305px;
+  padding: 11px;
+  text-align: center;
+  transition: 0.3s;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--clr-primary);
+  box-shadow: 0 4px 8px 0 var(--clr-primary);
+}
+.sec-marketplace .newly-issued .cards .card:hover {
+  box-shadow: 0 8px 16px 0 var(--clr-primary);
+}
+.sec-marketplace .newly-issued .cards .card .details {
+  margin-left: -10px;
+}
+
+.sec-marketplace .newly-issued .cards .card h1 {
+  margin-left: 10px;
+}
+
+.sec-marketplace .newly-issued .cards .card .details .details-list {
+  display: flex;
+}
+
+.sec-marketplace .newly-issued .cards .card .details img {
+  height: 120px;
+  width: 120px;
+  border-radius: 15px;
+  margin-left: 11px;
+  margin-top: 20px;
+  box-shadow: 1px 1px 2px 1px var(--clr-primary);
+}
+.sec-marketplace .newly-issued .cards .card .details img:hover {
+  height: 120px;
+  width: 120px;
+  border-radius: 15px;
+  margin-left: 11px;
+  margin-top: 20px;
+  transition: all 0.4s ease-in;
+}
+
+.sec-marketplace .newly-issued .cards .card span {
+  float: right;
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+  border-radius: 25px;
+}
+
+.sec-marketplace .newly-issued .cards .card .details .details-list h3 {
+  color: var(--clr-primary);
+  text-align: center;
+  font-size: 16px;
+  margin-left: 15px;
+  width: 100%;
+}
+.sec-marketplace .newly-issued .cards .card .details .details-list h4 {
+  color: var(--clr-primary);
+  font-size: 10px;
+  margin-left: -1px;
+}
+.sec-marketplace .newly-issued .cards .card .details h4 {
+  color: var(--clr-primary);
+  font-size: 10px;
+  margin-left: 10px;
+}
+.sec-marketplace .newly-issued .cards .card .details button {
+  margin: auto;
+  font-size: 18px;
+  padding: 10px 9px 8px 9px;
+  text-align: center;
+  margin: 6px 7px 4px 18px;
+  border-radius: 9px;
+  background-color: var(--clr-btn);
+  color: var(--clr-primary);
+  /* font-weight: 400; */
+  font-weight: bold;
+  border-color: #363949;
+  border: 2px solid var(--clr-primary);
+  cursor: pointer;
+}
+
+.sec-marketplace .newly-issued .cards .card .details button:hover {
+  margin: auto;
+  font-size: 18px;
+  padding: 10px 9px 8px 9px;
+  text-align: center;
+  margin: 6px 7px 4px 18px;
+  border-radius: 9px;
+  background-color: var(--clr-primary);
+  color: var(--clr-info-dark);
+  /* font-weight: 400; */
+  font-weight: bold;
+  border-color: #363949;
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+}

@@ -1,5 +1,5 @@
 :root {
-  --clr-primary: #194d9c;
+  --clr-primary: #1c7bf8;
   --clr-danger: #ff7782;
   --clr-success: #41f1b6;
   --clr-white: #ffffff;
@@ -18,7 +18,7 @@
   --card-padding: 1.8rem;
   --padding-1: 1.2rem;
   --box-shadow: 0.2rem 3 rem var(--clr-ligth);
-  --clr-btn: #83B1E1;
+  --clr-btn: #83b1e1;
 }
 nav {
   position: fixed;
@@ -62,13 +62,13 @@ nav .nav-menu ul li a {
   font-weight: 500;
   font-size: 20px;
 }
-nav .nav-menu ul li a:hover{
+nav .nav-menu ul li a:hover {
   color: var(--clr-dark);
   font-weight: 500;
   font-size: 20px;
 }
 
-nav .nav-menu ul li span:hover{
+nav .nav-menu ul li span:hover {
   color: var(--clr-info-light);
   font-weight: 500;
   font-size: 6vh;

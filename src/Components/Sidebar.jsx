@@ -32,10 +32,12 @@ const Sidebar = () => {
           </Link>
           <Link
             to="/secondary-marketplace"
-            className={splitLocation[1] === "secondary-marketplace" ? "active" : ""}
+            className={
+              splitLocation[1] === "secondary-marketplace" ? "active" : ""
+            }
           >
             <span class="material-symbols-outlined">matter</span>
-            <h3>SECONDARY MARKETPLACE</h3>
+            <h3>VOLUNTARY MARKETPLACE</h3>
           </Link>
           <Link
             to="/carbon-products"

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 :root {
-  --clr-primary: #1D5EFE;
+  --clr-primary: #1c7bf8;
   --clr-danger: #461DFE;
   --clr-success: #41f1b6;
   --clr-white: #ffffff;
@@ -130,7 +130,7 @@ p {
   color: var(--clr-dark-variant);
 }
 b {
-  color: var(--clr-dark);
+  color: var(--clr-primary);
 }
 .primary {
   color: var(--clr-primary);
@@ -188,7 +188,7 @@ aside h3 {
 
 aside .sidebar a {
   display: flex;
-  color: var(--clr-dark);
+  color: var(--clr-primary);
   margin-left: 0.5rem;
   gap: 1rem;
   align-items: center;
@@ -204,14 +204,14 @@ aside .sidebar a span {
 
 aside .sidebar a.active {
   background: var(--clr-light);
-  color: var(--clr-primary);
+  color: var(--clr-dark);
   border-left: 10px solid var(--clr-primary);
   margin-left: 1px;
   border-radius: 5px;
 }
 
 aside .top .logo .kiya {
-  color: #194d9c;
+  color: var(--clr-primary);
 }
 
 aside .sidebar a.active:before {
@@ -222,7 +222,7 @@ aside .sidebar a.active:before {
 }
 
 aside .sidebar a:hover {
-  color: var(--clr-primary);
+  color: var(--clr-dark);
   transition: 0.4s ease;
   margin-left: 5px;
 }
