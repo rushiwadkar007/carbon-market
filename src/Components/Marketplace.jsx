@@ -16,7 +16,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>TATA MOTORS</h3>
+                <h3>ORG1</h3>
               </div>
               <h4>20/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -28,7 +28,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>MAHINDRA</h3>
+                <h3>ORG2</h3>
               </div>
               <h4>50/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -40,7 +40,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>MARUTI</h3>
+                <h3>ORG3</h3>
               </div>
               <h4>20/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -52,7 +52,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>TOYOTA</h3>
+                <h3>ORG4</h3>
               </div>
               <h4>20/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -69,7 +69,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>TATA MOTORS</h3>
+                <h3>ORG1</h3>
               </div>
               <h4>20/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -81,7 +81,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>MAHINDRA</h3>
+                <h3>ORG2</h3>
               </div>
               <h4>50/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -93,7 +93,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>MARUTI</h3>
+                <h3>ORG3</h3>
               </div>
               <h4>20/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -105,7 +105,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>TOYOTA</h3>
+                <h3>ORG4</h3>
               </div>
               <h4>20/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -122,7 +122,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>TATA MOTORS</h3>
+                <h3>ORG1</h3>
               </div>
               <h4>20/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -134,7 +134,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>MAHINDRA</h3>
+                <h3>ORG2</h3>
               </div>
               <h4>50/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -146,7 +146,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>MARUTI</h3>
+                <h3>ORG3</h3>
               </div>
               <h4>20/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
@@ -158,7 +158,7 @@ const Marketplace = () => {
             <div className="details">
               <img src={tree} alt="" />
               <div className="details-list">
-                <h3>TOYOTA</h3>
+                <h3>ORG4</h3>
               </div>
               <h4>20/100 Credits Sold</h4>
               <h4>Issued By Govt. of India</h4>
