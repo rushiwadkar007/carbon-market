@@ -11,7 +11,7 @@ const Dashboard = () => {
               <span className="material-symbols-outlined"> 123 </span>
               <div className="card-container">
                 <h4>
-                  <b>TOTAL CREDITS GENERATED</b>
+                  <b>TOTAL <br/> LIQUIDITY(In Millions)</b>
                 </h4>
                 <p>1000</p>
               </div>
@@ -20,7 +20,7 @@ const Dashboard = () => {
               <span className="material-symbols-outlined"> equalizer </span>
               <div className="card-container">
                 <h4>
-                  <b>TOTAL CREDITS VOLUME(in tonnes)</b>
+                  <b>TOTAL CARBON LQUIDITY(in Millions)</b>
                 </h4>
                 <p>1000</p>
               </div>
@@ -33,14 +33,14 @@ const Dashboard = () => {
                 <h4>
                   <b>TOTAL COMPANIES ONBOARDED</b>
                 </h4>
-                <p>1000</p>
+                <p>10</p>
               </div>
             </div>
             <div className="card">
               <span className="material-symbols-outlined"> poker_chip </span>
               <div className="card-container">
                 <h4>
-                  <b>TOTAL TOKENS GENERATED</b>
+                  <b>TOTAL CARBON TOKENS BRIDGED</b>
                 </h4>
                 <p>1000</p>
               </div>

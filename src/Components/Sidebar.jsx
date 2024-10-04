@@ -11,7 +11,7 @@ const Sidebar = () => {
         <div className="top">
           <div className="logo">
             <h2 className="kiya">
-              KIYA's <span className="danger">CARBON EXCHANGE(C&T) </span>
+              KIYA's <span className="primary">CARBON EXCHANGE(C&T) </span>
             </h2>
           </div>
           <div className="close">
@@ -28,7 +28,7 @@ const Sidebar = () => {
             className={splitLocation[1] === "marketplace" ? "active" : ""}
           >
             <span className="material-symbols-outlined"> store </span>
-            <h3>MARKETPLACE</h3>
+            <h3>COMPLIANCE MARKETPLACE</h3>
           </Link>
           <Link
             to="/secondary-marketplace"

@@ -134,13 +134,13 @@ b {
 }
 .primary {
   color: var(--clr-primary);
+  font-size: 14.8px;
 }
 .success {
   color: var(--clr-success);
 }
 .danger {
   color: var(--clr-danger);
-  font-size: 14.8px;
 }
 .warning {
   color: var(--clr-warning);
@@ -171,19 +171,20 @@ aside .top div.close {
 
 aside .sidebar {
   position: fixed;
-  margin-top: 62px;
+  margin-top: 40px;
   background-color: #d9e4f5;
   display: flex;
   flex-direction: column;
-  height: 85vh;
+  height: 90vh;
   width: 16%;
   top: 1rem;
   border-radius: 10px;
+  padding-top: 5px;
 }
 
 aside h3 {
   font-weight: 400;
-  margin-left: 0px;
+  margin-left: -14px;
 }
 
 aside .sidebar a {
@@ -216,7 +217,7 @@ aside .top .logo .kiya {
 
 aside .sidebar a.active:before {
   content: "";
-  width: 0px;
+  width: 10px;
   height: 100%;
   background-color: #d9e4f5;
 }
@@ -224,7 +225,7 @@ aside .sidebar a.active:before {
 aside .sidebar a:hover {
   color: var(--clr-dark);
   transition: 0.4s ease;
-  margin-left: 5px;
+  margin-left: 4px;
 }
 
 aside .sidebar a:hover span {
