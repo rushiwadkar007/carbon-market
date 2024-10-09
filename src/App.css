@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 :root {
-  --clr-primary: #1c7bf8;
+  --clr-primary: #14490A;
   --clr-danger: #461DFE;
   --clr-success: #41f1b6;
   --clr-white: #ffffff;
@@ -20,17 +20,34 @@
   --padding-1: 1.2rem;
   --box-shadow: 0.2rem 3 rem var(--clr-ligth);
   --clr-btn: #83B1E1;
+  --primary-green: #016a70;
+  --primary-blue: #14490A;
+  --secondary-process-cyan: #b0d9b1;
+  --blue-289: #002244;
+  --grey-1: #e6e7e8;
+  --grey-2: #bcbec0;
+  --grey-3: #939598;
+  --grey-4: #6d6e71;
+  --page-margin-x: 2rem;
+  --page-margin-y: 1rem;
+  --main-margin-y: 1rem;
+  --form-heading-height: 3rem;
+  --document-nav-height: 45px;
+  --document-nav-padding: 1rem;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 150%;
   text-decoration: none;
   border: 0;
   list-style: none;
   appearance: none;
 }
+
+
 body {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
@@ -41,10 +58,27 @@ body {
   overflow-x: hidden;
   background-color: var(--clr-color-background);
 }
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
 .container {
   display: grid;
-  grid-template-columns: 14rem auto 14rem;
-  width: 96%;
+  /* grid-template-columns: 14rem auto 14rem; */
+  grid-template-columns: 17% 80%; /* First column is 100px, second column is flexible */
+  /* gap: 10px; */
+  width: 100%;
+  max-width: 100%;
   gap: 1.8rem;
   margin: 0 auto;
   justify-content: space-between;
@@ -151,7 +185,7 @@ aside {
   height: 100vh;
   width: 35vh;
   margin-top: -23px;
-  margin-left: -20px;
+  margin-left: 4px;
 }
 aside .top {
   position: fixed;
@@ -171,15 +205,31 @@ aside .top div.close {
 
 aside .sidebar {
   position: fixed;
-  margin-top: 40px;
+  margin-top: 35px;
   background-color: #d9e4f5;
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 91vh;
   width: 16%;
   top: 1rem;
   border-radius: 10px;
   padding-top: 5px;
+  transition: all 0.5s ease-in;
+}
+
+aside .sidebar .close span{
+  float: right;
+  font-weight: 1000;
+  color: var(--clr-primary);
+  cursor: pointer;
+  transition: all 1s ease-in;
+}
+aside .sidebar .close span:hover{
+  float: right;
+  font-weight: 1000;
+  color: var(--clr-dark);
+  cursor: pointer;
+  transition: all 0.5s ease-in;
 }
 
 aside h3 {
@@ -210,8 +260,6 @@ aside .sidebar a.active {
   margin-left: 1px;
   border-radius: 5px;
 }
-
-/*  */
 
 aside .top .logo .kiya {
   color: var(--clr-primary);
@@ -249,12 +297,13 @@ main {
 main .firstDiv {
   display: inline-flex;
   margin-top: 50px;
+  width: 98%;
 }
 
 main .firstDiv .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 200px;
+  width: 220px;
   border-radius: 10px;
   height: 100px;
   display: inline-flex;
@@ -334,7 +383,7 @@ main .table .tokens-table {
   border-collapse: collapse;
   margin-bottom: 25px;
   border-radius: 10px;
-  width: 102%;
+  width: 99%;
 }
 
 main .table .buying-table {
@@ -345,7 +394,7 @@ main .table .buying-table {
   border-collapse: collapse;
   margin-bottom: 25px;
   border-radius: 10px;
-  width: 102%;
+  width: 99%;
 }
 
 main .table .users-table {
@@ -356,7 +405,7 @@ main .table .users-table {
   border-collapse: collapse;
   margin-bottom: 25px;
   border-radius: 10px;
-  width: 102%;
+  width: 99%;
 }
 
 /* pagination-dashboard */

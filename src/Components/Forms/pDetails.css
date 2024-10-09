@@ -1,0 +1,18 @@
+
+
+.pDetailsform{
+    position: relative;
+    height: 445px;
+}
+
+.pDetailsform .firstName{
+    position: relative;
+}
+
+.pDetailsform .middleName{
+    position: relative;
+}
+
+.pDetailsform .lastName{
+    position: relative;
+}

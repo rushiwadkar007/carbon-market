@@ -1,0 +1,214 @@
+:root {
+  --clr-primary: #14490a;
+  --clr-danger: #461dfe;
+  --clr-success: #41f1b6;
+  --clr-white: #ffffff;
+  --clr-info-dark: #7d8da1;
+  --clr-info-light: #dce1eb;
+  --clr-dark: #363949;
+  --clr-warning: #ff4edc;
+  --clr-light: rgba(132, 139, 200, 0.18);
+  --clr-primary-variant: #194d9c;
+  --clr-dark-variant: #677483;
+  --clr-color-background: #f6f6f9;
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0.2rem 3 rem var(--clr-ligth);
+  --clr-btn: #83b1e1;
+  --primary-green: #016a70;
+  --primary-blue: #14490a;
+  --secondary-process-cyan: #b0d9b1;
+  --blue-289: #002244;
+  --grey-1: #e6e7e8;
+  --grey-2: #bcbec0;
+  --grey-3: #939598;
+  --grey-4: #6d6e71;
+  --page-margin-x: 2rem;
+  --page-margin-y: 1rem;
+  --main-margin-y: 1rem;
+  --form-heading-height: 3rem;
+  --document-nav-height: 45px;
+  --document-nav-padding: 1rem;
+}
+.carbonListing {
+  display: flex;
+  position: relative;
+  margin-top: 65px;
+  display: flex;
+  width: 141%;
+  margin-left: -50px;
+  height: 110%;
+}
+
+.carbonListing .sidebar {
+  margin: var(--main-margin-y) var(--page-margin-x);
+  margin-top: calc(var(--form-heading-height) + var(--main-margin-y));
+}
+
+.carbonListing .sidebar {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  width: 150px;
+  max-width: 150px;
+  background-color: var(--clr-info-light);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 var(--clr-primary);
+  border: 1px solid var(--clr-primary);
+  height: 300px;
+}
+
+.carbonListing .sidebar:hover {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  width: 150px;
+  max-width: 150px;
+  background-color: var(--clr-info-light);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 var(--clr-primary);
+  border: 1px solid var(--clr-primary);
+  height: 300px;
+}
+
+.carbonListing .form-step {
+  font-weight: 500 !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carbonListing .form-step-active svg {
+  width: 1rem;
+}
+
+.carbonListing .form-step-active {
+  color: var(--primary-blue);
+}
+
+.carbonListing .form-step-completed {
+  color: var(--primary-green);
+}
+
+.carbonListing .form-step-completed svg {
+  width: 1rem;
+}
+
+.carbonListing .form-step-pending svg {
+  width: 0.5rem;
+}
+
+.carbonListing .form-step-pending {
+  color: var(--grey-4);
+}
+
+.carbonListing .main-content {
+  width: 100%;
+  height: calc(100vh - 90px);
+  position: relative;
+}
+
+.carbonListing .main-content .form-heading {
+  height: var(--form-heading-height);
+  font-size: 1.8rem;
+  color: var(--clr-primary);
+  margin-left: -179px;
+  display: inline-block;
+}
+
+.carbonListing .main-content .form-component {
+  margin: var(--main-margin-y) -0.5rem;
+  width: 67%;
+  max-width: 67%;
+  background-color: var(--clr-info-light);
+  box-shadow: 0 8px 16px 0 var(--clr-primary);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--clr-primary);
+  height: 547px;
+  max-height: 547px;
+  position: relative;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.carbonListing .main-content .form-component::-webkit-scrollbar {
+  width: 12px;
+}
+
+.carbonListing .main-content .form-component::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.carbonListing .main-content .form-component::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.carbonListing .main-content .form-component:hover {
+  margin: var(--main-margin-y) -0.5rem;
+  width: 67%;
+  max-width: 67%;
+  background-color: var(--clr-info-light);
+  box-shadow: 0 8px 16px 0 var(--clr-primary);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--clr-primary);
+  height: 547px;
+  max-height: 547px;
+}
+
+.carbonListing .main-content .form-component .nav-buttons {
+  bottom: 3%;
+  right: 3%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between; /* Space between Back and Next buttons */
+  margin-top: auto;
+  height: 100px;
+}
+
+.carbonListing .main-content .form-component .nav-buttons button {
+  border: 0;
+  outline: 0;
+  padding: 0.3rem 1rem;
+  color: #ffffff;
+  margin-top: 28px;
+  margin-left: 550px;
+  cursor: pointer;
+  height: 39px;
+  font-size: 17px;
+  font-weight: 800;
+  justify-content: center;
+}
+
+.carbonListing .main-content .form-component .nav-buttons .nav-back {
+  color: white;
+  background-color: var(--primary-blue) !important;
+  border-radius: 16px;
+  padding: 0.3rem 2rem !important;
+  float: left;
+  margin-left: 1px;
+  text-align: left;
+  justify-content: center;
+}
+
+.carbonListing .main-content .form-component .nav-buttons .nav-next {
+  color: white;
+  background-color: var(--primary-blue) !important;
+  border-radius: 16px;
+  padding: 0.3rem 2rem !important;
+  float: right;
+  margin-left: 1px;
+  justify-content: center;
+  margin-top: 25px;
+}

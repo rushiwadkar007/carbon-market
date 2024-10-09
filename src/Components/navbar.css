@@ -1,5 +1,5 @@
 :root {
-  --clr-primary: #1c7bf8;
+  --clr-primary: #14490A;
   --clr-danger: #ff7782;
   --clr-success: #41f1b6;
   --clr-white: #ffffff;
@@ -21,9 +21,14 @@
   --clr-btn: #83b1e1;
 }
 nav {
+  margin-top:5px;
+  background-color: var(--clr-info-light);
   position: fixed;
-  margin-left: 17%;
-  width: 82.5%;
+  margin-left: 18%;
+  width: 79.5%;
+  z-index: 1;
+  border: 1px solid green;
+  border-radius: 10px;
 }
 
 nav .nav-menu {
@@ -69,10 +74,11 @@ nav .nav-menu ul li a:hover {
 }
 
 nav .nav-menu ul li span:hover {
-  color: var(--clr-info-light);
+  color: var(--clr-dark);
   font-weight: 500;
   font-size: 6vh;
   cursor: pointer;
+  transition: all 0.1s ease-in;
 }
 
 nav .nav-menu ul li span {
@@ -82,4 +88,5 @@ nav .nav-menu ul li span {
   cursor: pointer;
   background-color: var(--clr-btn);
   border-radius: 25px;
+  transition: all 0.1s ease-in;
 }

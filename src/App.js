@@ -6,6 +6,7 @@ import Sidebar from "./Components/Sidebar.jsx";
 import Marketplace from "./Components/Marketplace.jsx";
 import SecMarketplace  from "./Components/SecMarketplace.jsx";
 import Navbar from "./Components/Navbar.jsx";
+import CarbonListing from "./Components/CarbonListing.jsx";
 function App() {
   return (
     <BrowserRouter basename="">
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/secondary-marketplace" element={<SecMarketplace />}/>
+          <Route path="/carbon-products-list" element={<CarbonListing />}/>
         </Routes>
       </div>
     </BrowserRouter>
