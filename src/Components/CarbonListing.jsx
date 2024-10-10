@@ -59,15 +59,19 @@ const CarbonListing = () => {
         "courseApplied",
     ];
 
-    const educationalBackground = [
-        "lastHighSchool",
+    const projectDetails = [
+        "projectname",
+        "projectType",
         "yearGraduated",
-        // "cgpa",
-        "highSchoolAddress",
-        "highSchoolCountry",
-        "highSchoolState",
-        "highSchoolCity",
-        "highSchoolPostalCode",
+        "projectlocation",
+        "projectdecscription",
+        "carbonestimate",
+        "baselinebeforeproject",
+        "methodology",
+        "carbonreductionway",
+        "thirdpartycertificationdone",
+        "thirdpartycertification",
+        "projectmonitoring"
     ];
 
     const personalDetailsValues = [
@@ -96,8 +100,8 @@ const CarbonListing = () => {
             if (!flag) return false;
         } else if (currentForm === 1) {
             let flag = true;
-            for (let i = 0; i < educationalBackground.length; i++) {
-                let val = obj[educationalBackground[i]];
+            for (let i = 0; i < projectDetails.length; i++) {
+                let val = obj[projectDetails[i]];
                 console.log("val ", i, val, !val || val.length < 1);
                 if (!val || val.length < 1) {
                     flag = false;
@@ -107,8 +111,8 @@ const CarbonListing = () => {
             if (!flag) return false;
         } else if (currentForm === 2) {
             let flag = true;
-            for (let i = 0; i < educationalBackground.length; i++) {
-                let val = obj[educationalBackground[i]];
+            for (let i = 0; i < projectDetails.length; i++) {
+                let val = obj[projectDetails[i]];
                 if (!val || val.length < 1) {
                     flag = false;
                 }

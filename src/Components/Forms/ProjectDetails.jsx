@@ -20,7 +20,7 @@ const ProjectDetails = () => {
   const [thirdPartyCertification, setThirdPartyCertification] = React.useState("");
   const [hasThirdPartyVerified, setHasThirdPartyVerified] = useState("");
   const [projectMonitoring, setProjectMonitoring] = React.useState("")
-  console.log("thirdPartyCertification ", hasThirdPartyVerified);
+  console.log("projectType ", projectType);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -77,11 +77,11 @@ const ProjectDetails = () => {
                   }}
                   sx={{ marginBottom: 0 }}
                   {...field}
-                  error={Boolean(errors?.lastHighSchool)}
-                  onBlur={() => trigger("lastHighSchool")}
+                  error={Boolean(errors?.projectname)}
+                  onBlur={() => trigger("projectname")}
                 />
-                {errors?.lastHighSchool?.message && (
-                  <FormHelperText error={Boolean(errors?.lastHighSchool)}>
+                {errors?.projectname?.message && (
+                  <FormHelperText error={Boolean(errors?.projectname)}>
                     {htmlText.thisFieldIsRequired}
                   </FormHelperText>
                 )}
@@ -105,39 +105,40 @@ const ProjectDetails = () => {
               render={({ field, fieldState }) => (
                 <>
                   <Select
-                    value={projectType || null}
-                    onChange={(event) => { console.log(event); setProjectType(event.target.value) }}
-                    style={{ color: "black", fontWeight: "bold" }}
+                    defaultValue={""}
+                    value={projectType}
+                    onChange={(event) => {setProjectType(event.target.value)}}
+                    style={{ color: "black", fontWeight: "bold"}}
                     label="Type of Project"
                     {...field}
                     error={Boolean(errors?.projectType)}
                     onBlur={() => trigger("projectType")}
                   >
-                    <MenuItem value="Bicycle and Pedestrian Infrastructure Development" style={{ color: "black", fontWeight: "bold" }}>Bicycle and Pedestrian Infrastructure Development</MenuItem>
-                    <MenuItem value="Biogas Projects" style={{ color: "black", fontWeight: "bold" }}>Biogas Projects</MenuItem>
-                    <MenuItem value="Carbon Sequestration" style={{ color: "black", fontWeight: "bold" }}>Carbon Sequestration</MenuItem>
-                    <MenuItem value="Carpooling and Ride-sharing" style={{ color: "black", fontWeight: "bold" }}>Carpooling and Ride-sharing</MenuItem>
-                    <MenuItem value="Composting" style={{ color: "black", fontWeight: "bold" }}>Composting</MenuItem>
-                    <MenuItem value="Corporate Sustainability Initiatives" style={{ color: "black", fontWeight: "bold" }}>Corporate Sustainability Initiatives</MenuItem>
-                    <MenuItem value="EV Promotion" style={{ color: "black", fontWeight: "bold" }}>EV Promotion</MenuItem>
-                    <MenuItem value="Geothermal Energy Projects" style={{ color: "black", fontWeight: "bold" }}>Geothermal Energy Projects</MenuItem>
-                    <MenuItem value="Green Packaging" style={{ color: "black", fontWeight: "bold" }}>Green Packaging</MenuItem>
-                    <MenuItem value="Hydropower Projects" style={{ color: "black", fontWeight: "bold" }}>Hydropower Projects</MenuItem>
-                    <MenuItem value="Low-Carbon Logistics" style={{ color: "black", fontWeight: "bold" }}>Low-Carbon Logistics</MenuItem>
-                    <MenuItem value="Mangrove Restoration" style={{ color: "black", fontWeight: "bold" }}>Mangrove Restoration</MenuItem>
-                    <MenuItem value="Methane Capture" style={{ color: "black", fontWeight: "bold" }}>Methane Capture</MenuItem>
-                    <MenuItem value="Organic Farming" style={{ color: "black", fontWeight: "bold" }}>Organic Farming</MenuItem>
-                    <MenuItem value="Reforestation" style={{ color: "black", fontWeight: "bold" }}>Reforestation</MenuItem>
-                    <MenuItem value="Regenerative Agriculture" style={{ color: "black", fontWeight: "bold" }}>Regenerative Agriculture</MenuItem>
-                    <MenuItem value="Renewable Energy" style={{ color: "black", fontWeight: "bold" }}>Renewable Energy</MenuItem>
-                    <MenuItem value="Seagrass and Salt Marsh Restoration" style={{ color: "black", fontWeight: "bold" }}>Seagrass and Salt Marsh Restoration</MenuItem>
-                    <MenuItem value="Solar Power Projects" style={{ color: "black", fontWeight: "bold" }}>Solar Power Projects</MenuItem>
-                    <MenuItem value="Tree Plantation" style={{ color: "black", fontWeight: "bold" }}>Tree Plantation</MenuItem>
-                    <MenuItem value="Waste Management" style={{ color: "black", fontWeight: "bold" }}>Waste Management</MenuItem>
-                    <MenuItem value="Water Conservation" style={{ color: "black", fontWeight: "bold" }}>Water Conservation</MenuItem>
-                    <MenuItem value="Water Purification Systems" style={{ color: "black", fontWeight: "bold" }}>Water Purification Systems</MenuItem>
-                    <MenuItem value="Bamboo Plantation" style={{ color: "black", fontWeight: "bold" }}>Bamboo Plantation</MenuItem>
-                    <MenuItem value="Other" style={{ color: "black", fontWeight: "bold" }}>Other</MenuItem>
+                    <MenuItem value={"Bicycle and Pedestrian Infrastructure Development"} style={{ color: "black", fontWeight: "bold" }}>Bicycle and Pedestrian Infrastructure Development</MenuItem>
+                    <MenuItem value={"Biogas Projects"} style={{ color: "black", fontWeight: "bold" }}>Biogas Projects</MenuItem>
+                    <MenuItem value={"Carbon Sequestration"} style={{ color: "black", fontWeight: "bold" }}>Carbon Sequestration</MenuItem>
+                    <MenuItem value={"Carpooling and Ride-sharing"} style={{ color: "black", fontWeight: "bold" }}>Carpooling and Ride-sharing</MenuItem>
+                    <MenuItem value={"Composting"} style={{ color: "black", fontWeight: "bold" }}>Composting</MenuItem>
+                    <MenuItem value={"Corporate Sustainability Initiatives"}style={{ color: "black", fontWeight: "bold" }}>Corporate Sustainability Initiatives</MenuItem>
+                    <MenuItem value={"EV Promotion"} style={{ color: "black", fontWeight: "bold" }}>EV Promotion</MenuItem>
+                    <MenuItem value={"Geothermal Energy Projects"} style={{ color: "black", fontWeight: "bold" }}>Geothermal Energy Projects</MenuItem>
+                    <MenuItem value={"Green Packaging"} style={{ color: "black", fontWeight: "bold" }}>Green Packaging</MenuItem>
+                    <MenuItem value={"Hydropower Projects"} style={{ color: "black", fontWeight: "bold" }}>Hydropower Projects</MenuItem>
+                    <MenuItem value={"Low-Carbon Logistics"} style={{ color: "black", fontWeight: "bold" }}>Low-Carbon Logistics</MenuItem>
+                    <MenuItem value={"Mangrove Restoration"} style={{ color: "black", fontWeight: "bold" }}>Mangrove Restoration</MenuItem>
+                    <MenuItem value={"Methane Capture"} style={{ color: "black", fontWeight: "bold" }}>Methane Capture</MenuItem>
+                    <MenuItem value={"Organic Farming"} style={{ color: "black", fontWeight: "bold" }}>Organic Farming</MenuItem>
+                    <MenuItem value={"Reforestation"} style={{ color: "black", fontWeight: "bold" }}>Reforestation</MenuItem>
+                    <MenuItem value={"Regenerative Agriculture"} style={{ color: "black", fontWeight: "bold" }}>Regenerative Agriculture</MenuItem>
+                    <MenuItem value={"Renewable Energy"} style={{ color: "black", fontWeight: "bold" }}>Renewable Energy</MenuItem>
+                    <MenuItem value={"Seagrass and Salt Marsh Restoration"} style={{ color: "black", fontWeight: "bold" }}>Seagrass and Salt Marsh Restoration</MenuItem>
+                    <MenuItem value={"Solar Power Projects"} style={{ color: "black", fontWeight: "bold" }}>Solar Power Projects</MenuItem>
+                    <MenuItem value={"Tree Plantation"} style={{ color: "black", fontWeight: "bold" }}>Tree Plantation</MenuItem>
+                    <MenuItem value={"Waste Management"} style={{ color: "black", fontWeight: "bold" }}>Waste Management</MenuItem>
+                    <MenuItem value={"Water Conservation"} style={{ color: "black", fontWeight: "bold" }}>Water Conservation</MenuItem>
+                    <MenuItem value={"Water Purification Systems"} style={{ color: "black", fontWeight: "bold" }}>Water Purification Systems</MenuItem>
+                    <MenuItem value={"Bamboo Plantation"} style={{ color: "black", fontWeight: "bold" }}>Bamboo Plantation</MenuItem>
+                    <MenuItem value={"Other"} style={{ color: "black", fontWeight: "bold" }}>Other</MenuItem>
                   </Select>
                   {errors?.projectType?.message && (
                     <FormHelperText error={Boolean(errors?.projectType)}>
