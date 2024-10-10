@@ -18,8 +18,9 @@ const ProjectDetails = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [projectType, setProjectType] = React.useState("");
   const [thirdPartyCertification, setThirdPartyCertification] = React.useState("");
+  const [hasThirdPartyVerified, setHasThirdPartyVerified] = useState("");
   const [projectMonitoring, setProjectMonitoring] = React.useState("")
-  console.log("thirdPartyCertification ", thirdPartyCertification);
+  console.log("thirdPartyCertification ", hasThirdPartyVerified);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -35,10 +36,14 @@ const ProjectDetails = () => {
     setCgpa(value);
   };
 
-  const handleChange = (e) =>{
+  const handleChange = (e) => {
     console.log("e value ", e)
     setThirdPartyCertification(e.target.value)
-  }
+  };
+  const handleChange1 = (e) => {
+    console.log("e handlechange 1 value ", e);
+    setHasThirdPartyVerified(e.target.value)
+  };
 
   const {
     control,
@@ -101,7 +106,7 @@ const ProjectDetails = () => {
                 <>
                   <Select
                     value={projectType || null}
-                    onChange={(event) => {console.log(event);setProjectType(event.target.value)}}
+                    onChange={(event) => { console.log(event); setProjectType(event.target.value) }}
                     style={{ color: "black", fontWeight: "bold" }}
                     label="Type of Project"
                     {...field}
@@ -132,6 +137,7 @@ const ProjectDetails = () => {
                     <MenuItem value="Water Conservation" style={{ color: "black", fontWeight: "bold" }}>Water Conservation</MenuItem>
                     <MenuItem value="Water Purification Systems" style={{ color: "black", fontWeight: "bold" }}>Water Purification Systems</MenuItem>
                     <MenuItem value="Bamboo Plantation" style={{ color: "black", fontWeight: "bold" }}>Bamboo Plantation</MenuItem>
+                    <MenuItem value="Other" style={{ color: "black", fontWeight: "bold" }}>Other</MenuItem>
                   </Select>
                   {errors?.projectType?.message && (
                     <FormHelperText error={Boolean(errors?.projectType)}>
@@ -171,7 +177,6 @@ const ProjectDetails = () => {
                       error={Boolean(errors?.yearGraduated)}
                       onBlur={() => trigger("yearGraduated")}
                     />
-
                     {errors?.yearGraduated?.message && (
                       <FormHelperText error={Boolean(errors?.yearGraduated)}>
                         {htmlText.thisFieldIsRequired}
@@ -181,7 +186,6 @@ const ProjectDetails = () => {
                 )}
               />
             </Grid>
-
             <Grid item xs={7} style={{ marginLeft: "auto" }}>
               <FormControl fullWidth className="form-group">
                 {/* <div className="row align-items-end">
@@ -291,7 +295,6 @@ const ProjectDetails = () => {
                   error={Boolean(errors?.highSchoolAddress)}
                   onBlur={() => trigger("highSchoolAddress")}
                 />
-
                 {errors?.highSchoolAddress?.message && (
                   <FormHelperText error={Boolean(errors?.highSchoolAddress)}>
                     {htmlText.thisFieldIsRequired}
@@ -403,41 +406,6 @@ const ProjectDetails = () => {
             )}
           />
         </Grid>
-
-        <Grid item xs={12}>
-          <Controller
-            name="project certification"
-            control={control}
-            rules={{ required: htmlText.thisFieldIsRequired }}
-            render={({ field, fieldState }) => (
-              <>
-                <TextField
-                  label="Has the project been verified by a third-party certification standard?"
-                  required
-                  id="outlined-helperText"
-                  fullWidth
-                  size="small"
-                  margin="normal"
-                  InputProps={{
-                    style: {
-                      color: "black",
-                      fontWeight: "bold"
-                    }
-                  }}
-                  sx={{ marginBottom: 0 }}
-                  {...field}
-                  error={Boolean(errors?.highSchoolAddress)}
-                  onBlur={() => trigger("highSchoolAddress")}
-                />
-                {errors?.highSchoolAddress?.message && (
-                  <FormHelperText error={Boolean(errors?.highSchoolAddress)}>
-                    {htmlText.thisFieldIsRequired}
-                  </FormHelperText>
-                )}
-              </>
-            )}
-          />
-        </Grid>
         <Grid item xs={12}>
           <Controller
             name="carbonreductionway"
@@ -482,6 +450,44 @@ const ProjectDetails = () => {
           >
             <InputLabel>Has the project been verified by a third-party certification standard?</InputLabel>
             <Controller
+              name="thirdpartycertificationdone"
+              control={control}
+              rules={{ required: htmlText.thisFieldIsRequired }}
+              render={({ field, fieldState }) => (
+                <>
+                  <Select
+                    defaultValue={hasThirdPartyVerified}
+                    value={hasThirdPartyVerified || null}
+                    onChange={handleChange1}
+                    style={{ color: "black", fontWeight: "bold" }}
+                    label="Type of Project"
+                    {...field}
+                    error={Boolean(errors?.hasThirdPartyVerified)}
+                    onBlur={() => trigger("thirdPartyCertification")}
+                  >
+                    <MenuItem value="YES" style={{ color: "black", fontWeight: "bold" }}>YES</MenuItem>
+                    <MenuItem value="NO" style={{ color: "black", fontWeight: "bold" }}>NO</MenuItem>
+                  </Select>
+                  {errors?.hasThirdPartyVerified?.message && (
+                    <FormHelperText error={Boolean(errors?.hasThirdPartyVerified)}>
+                      {htmlText.thisFieldIsRequired}
+                    </FormHelperText>
+                  )}
+                </>
+              )}
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={12}>
+          <FormControl
+            fullWidth
+            required
+            id="outlined-helperText"
+            size="small"
+            margin="normal"
+          >
+            <InputLabel>Has the project been verified by a third-party certification standard?</InputLabel>
+            <Controller
               name="thirdpartycertification"
               control={control}
               rules={{ required: htmlText.thisFieldIsRequired }}
@@ -489,7 +495,7 @@ const ProjectDetails = () => {
                 <>
                   <Select
                     value={thirdPartyCertification || null}
-                    onChange={(event) => {handleChange(event)}}
+                    onChange={(event) => { handleChange(event) }}
                     style={{ color: "black", fontWeight: "bold" }}
                     label="Type of Project"
                     {...field}
@@ -528,7 +534,7 @@ const ProjectDetails = () => {
                 <>
                   <Select
                     value={projectMonitoring || null}
-                    onChange={(event) => {setProjectMonitoring(event.target.value)}}
+                    onChange={(event) => { setProjectMonitoring(event.target.value) }}
                     style={{ color: "black", fontWeight: "bold" }}
                     label="Type of Project"
                     {...field}

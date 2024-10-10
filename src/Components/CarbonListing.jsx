@@ -9,6 +9,7 @@ import ProjectDetails from './Forms/ProjectDetails';
 import UploadImage from './Forms/UploadImage';
 import ReviewForm from './Forms/ReviewForm';
 import "./carbonListing.css";
+import ThankYou from './Forms/ThankYou';
 const formArray = [
     {
         id: 0,
@@ -34,6 +35,11 @@ const formArray = [
         name: "Review & Submit",
         heading: "Confirm Your Details",
         component: <ReviewForm/>,
+    },
+    {
+        id: 4,
+        name: "Thank You Note!",
+        heading: "Thank YOU FOR SUBMITTING YOUR PROPOSAL!"
     }
 ];
 const CarbonListing = () => {
