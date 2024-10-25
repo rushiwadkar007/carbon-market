@@ -5,9 +5,10 @@ import mahindra from "../public/images/mahindra.jpeg";
 import maruti from "../public/images/maruti.png";
 import toyota from "../public/images/toyota.png";
 import "./marketplace.css";
-const Marketplace = () => {
+const Marketplace = (props) => {
+  console.log("isClicked marketplace", props.clickEvent)
   return (
-    <div className="marketplace">
+    <div className={props.clickEvent === false ? "marketplace": "marketplaceClose"}>
       <div className="newly-issued">
         <h1>NEWLY GOVT ISSUED CREDITS</h1>
         <div className="cards">

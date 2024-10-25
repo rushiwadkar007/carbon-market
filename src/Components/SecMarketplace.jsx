@@ -1,7 +1,8 @@
 import "./secMarketplace.css";
 import React from "react";
 import tree from "../public/images/tree.jpg";
-const SecMarketplace = () => {
+const SecMarketplace = (props) => {
+  console.log("isClicked sec marketplace ", props.clickEvent);
   return (
     <div className="sec-marketplace">
       <div className="card">

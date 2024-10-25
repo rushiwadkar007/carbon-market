@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
   return (
     <div>
-      <main>
+      <main className={props.clickEvent === false ? "": "mainClosed"}>
         <div>
           <div className="firstDiv">
             <div className="card">
               <span className="material-symbols-outlined"> 123 </span>
               <div className="card-container">
                 <h4>
-                  <b>TOTAL <br/> LIQUIDITY(In Millions)</b>
+                  <b>TOTAL <br /> LIQUIDITY(In Millions)</b>
                 </h4>
                 <p>1000</p>
               </div>

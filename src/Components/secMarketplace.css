@@ -1,5 +1,5 @@
 :root {
-  --clr-primary: #14490A;
+  --clr-primary: #540676;
   --clr-danger: #ff7782;
   --clr-success: #41f1b6;
   --clr-white: #ffffff;
@@ -181,6 +181,7 @@
   border-color: #363949;
   border: 2px solid var(--clr-primary);
   cursor: pointer;
+  box-shadow: 0 4px 8px 0 var(--clr-primary);
 }
 
 .sec-marketplace .sec-tokens .cards .card .details button:hover {
@@ -197,4 +198,5 @@
   border-color: #363949;
   cursor: pointer;
   transition: all 0.4s ease-in;
+  box-shadow: 0 8px 16px 0 var(--clr-primary);
 }

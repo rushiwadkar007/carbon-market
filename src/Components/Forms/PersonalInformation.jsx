@@ -53,7 +53,8 @@ const PersonalInformation = () => {
                                         style: {
                                             color: "black",
                                             fontWeight: "bold",
-                                            border: "none"
+                                            border: "none",
+                                            borderColor: "#540676"
                                         }
                                     }}
                                     required

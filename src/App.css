@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+/* #14490A */
 :root {
-  --clr-primary: #14490A;
+  --clr-primary: #540676;
   --clr-danger: #461DFE;
   --clr-success: #41f1b6;
   --clr-white: #ffffff;
@@ -21,7 +22,7 @@
   --box-shadow: 0.2rem 3 rem var(--clr-ligth);
   --clr-btn: #83B1E1;
   --primary-green: #016a70;
-  --primary-blue: #14490A;
+  --primary-blue: #540676;
   --secondary-process-cyan: #b0d9b1;
   --blue-289: #002244;
   --grey-1: #e6e7e8;
@@ -214,7 +215,7 @@ aside .sidebar {
   top: 1rem;
   border-radius: 10px;
   padding-top: 5px;
-  transition: all 0.5s ease-in;
+  transition: all 1s ease-in;
 }
 
 aside .sidebar .close span{
@@ -229,7 +230,7 @@ aside .sidebar .close span:hover{
   font-weight: 1000;
   color: var(--clr-dark);
   cursor: pointer;
-  transition: all 0.5s ease-in;
+  transition: all 1s ease-in;
 }
 
 aside h3 {
@@ -292,6 +293,12 @@ aside .sidebar a span.msg_count {
 }
 main {
   margin-left: -60px;
+  transition: all 1s ease-in;
+}
+
+.mainClosed{
+  margin-left: -235px;
+  transition: all 1s ease-in;
 }
 
 main .firstDiv {
@@ -301,7 +308,7 @@ main .firstDiv {
 }
 
 main .firstDiv .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 #540676;
   transition: 0.3s;
   width: 220px;
   border-radius: 10px;
@@ -319,7 +326,7 @@ main .firstDiv .card span {
   transition: all 0.1s ease-in;
 }
 main .firstDiv .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 #540676;
 }
 
 main .firstDiv .card .card-container {
@@ -416,7 +423,7 @@ main .table .tokens-table .pagination {
 }
 
 main .table .tokens-table .pagination a {
-  color: black;
+  color: #540676;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
@@ -441,7 +448,7 @@ main .table .tokens-table .pagination {
 }
 
 main .table .tokens-table .pagination a {
-  color: black;
+  color: #540676;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
@@ -470,7 +477,7 @@ main .table .buying-table .pagination {
 }
 
 main .table .buying-table .pagination a {
-  color: black;
+  color: #540676;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
@@ -500,7 +507,7 @@ main .table .users-table .pagination {
 }
 
 main .table .users-table .pagination a {
-  color: black;
+  color: #540676;
   float: left;
   padding: 8px 16px;
   text-decoration: none;

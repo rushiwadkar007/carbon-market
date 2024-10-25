@@ -1,0 +1,79 @@
+/* Container for the thank you message */
+.carbonListing .main-content .form-component{
+}
+
+.thank-you-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    float: center;
+    margin-top: 230px;
+    border-radius: 20px;
+    height: 10px;
+  }
+  
+  /* Thank you card */
+  .thank-you-card {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px 60px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  /* Thank you heading */
+  .thank-you-card h1 {
+    font-size: 2.5rem;
+    color: #540676;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph */
+  .thank-you-card p {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* Button */
+  .button {
+    display: inline-block;
+    background-color: #540676;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .button:hover {
+    background-color: #B975D6;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .thank-you-card {
+      padding: 30px 40px;
+    }
+    
+    .thank-you-card h1 {
+      font-size: 2rem;
+    }
+    
+    .thank-you-card p {
+      font-size: 1rem;
+    }
+    
+    .button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }

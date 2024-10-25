@@ -20,6 +20,11 @@ const ProjectDetails = () => {
   const [thirdPartyCertification, setThirdPartyCertification] = React.useState("");
   const [hasThirdPartyVerified, setHasThirdPartyVerified] = useState("");
   const [projectMonitoring, setProjectMonitoring] = React.useState("")
+  const [projectLifeSpan, setProjectLifeSpan] = React.useState("");
+  const [projectoccurance, setProjectoccurance] = React.useState("");
+  const [regrequirements, setRegRequirements] = React.useState("");
+  const [projectEstimate, setProjectEstimate] = React.useState("");
+  const [projectFinancing, setProjectFinancing] = React.useState("")
   console.log("projectType ", projectType);
 
   const handleClick = (event) => {
@@ -549,6 +554,194 @@ const ProjectDetails = () => {
                   </Select>
                   {errors?.projectMonitoring?.message && (
                     <FormHelperText error={Boolean(errors?.projectMonitoring)}>
+                      {htmlText.thisFieldIsRequired}
+                    </FormHelperText>
+                  )}
+                </>
+              )}
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={12}>
+          <FormControl
+            fullWidth
+            required
+            id="outlined-helperText"
+            size="small"
+            margin="normal"
+          >
+            <InputLabel>What is the project's expected lifespan for generating carbon reductions?</InputLabel>
+            <Controller
+              name="projectlifespan"
+              control={control}
+              rules={{ required: htmlText.thisFieldIsRequired }}
+              render={({ field, fieldState }) => (
+                <>
+                  <Select
+                    value={projectLifeSpan || null}
+                    onChange={(event) => { setProjectLifeSpan(event.target.value) }}
+                    style={{ color: "black", fontWeight: "bold" }}
+                    label="Type of Project"
+                    {...field}
+                    error={Boolean(errors?.projectLifeSpan)}
+                    onBlur={() => trigger("projectlifespan")}
+                  >
+                    <MenuItem value="Less than 5 years" style={{ color: "black", fontWeight: "bold" }}>Less than 5 years</MenuItem>
+                    <MenuItem value="5-10 years" style={{ color: "black", fontWeight: "bold" }}>5-10 years</MenuItem>
+                    <MenuItem value="10-20 years" style={{ color: "black", fontWeight: "bold" }}>10-20 years</MenuItem>
+                    <MenuItem value="20+ years" style={{ color: "black", fontWeight: "bold" }}>20+ years</MenuItem>
+                  </Select>
+                  {errors?.projectLifeSpan?.message && (
+                    <FormHelperText error={Boolean(errors?.projectLifeSpan)}>
+                      {htmlText.thisFieldIsRequired}
+                    </FormHelperText>
+                  )}
+                </>
+              )}
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={12}>
+          <FormControl
+            fullWidth
+            required
+            id="outlined-helperText"
+            size="small"
+            margin="normal"
+          >
+            <InputLabel>Would this project have occurred without the financial incentives from carbon credits?</InputLabel>
+            <Controller
+              name="projectoccurance"
+              control={control}
+              rules={{ required: htmlText.thisFieldIsRequired }}
+              render={({ field, fieldState }) => (
+                <>
+                  <Select
+                    value={projectoccurance || null}
+                    onChange={(event) => { setProjectoccurance(event.target.value) }}
+                    style={{ color: "black", fontWeight: "bold" }}
+                    label="Type of Project"
+                    {...field}
+                    error={Boolean(errors?.projectoccurance)}
+                    onBlur={() => trigger("projectoccurance")}
+                  >
+                    <MenuItem value="yes" style={{ color: "black", fontWeight: "bold" }}>YES</MenuItem>
+                    <MenuItem value="no" style={{ color: "black", fontWeight: "bold" }}>NO</MenuItem>
+                    <MenuItem value="partially" style={{ color: "black", fontWeight: "bold" }}>Partially, but carbon credits were crucial for scaling the project</MenuItem>
+                  </Select>
+                  {errors?.projectoccurance?.message && (
+                    <FormHelperText error={Boolean(errors?.projectoccurance)}>
+                      {htmlText.thisFieldIsRequired}
+                    </FormHelperText>
+                  )}
+                </>
+              )}
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={12}>
+          <FormControl
+            fullWidth
+            required
+            id="outlined-helperText"
+            size="small"
+            margin="normal"
+          >
+            <InputLabel>Does the project exceed regulatory requirements in your sector or region?</InputLabel>
+            <Controller
+              name="regrequirements"
+              control={control}
+              rules={{ required: htmlText.thisFieldIsRequired }}
+              render={({ field, fieldState }) => (
+                <>
+                  <Select
+                    value={regrequirements || null}
+                    onChange={(event) => { setRegRequirements(event.target.value) }}
+                    style={{ color: "black", fontWeight: "bold" }}
+                    label="Does the project exceed regulatory requirements in your sector or region?"
+                    {...field}
+                    error={Boolean(errors?.regrequirements)}
+                    onBlur={() => trigger("regrequirements")}
+                  >
+                    <MenuItem value="yes" style={{ color: "black", fontWeight: "bold" }}>YES, It goes beyond the current regulations</MenuItem>
+                    <MenuItem value="no" style={{ color: "black", fontWeight: "bold" }}>NO, It complies with existing regulations</MenuItem>
+                    <MenuItem value="not appliation" style={{ color: "black", fontWeight: "bold" }}>Not applicable (no relevant regulations)</MenuItem>
+                  </Select>
+                  {errors?.regrequirements?.message && (
+                    <FormHelperText error={Boolean(errors?.regrequirements)}>
+                      {htmlText.thisFieldIsRequired}
+                    </FormHelperText>
+                  )}
+                </>
+              )}
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={12}>
+          <Controller
+            name="projectEstimate"
+            control={control}
+            rules={{ required: htmlText.thisFieldIsRequired }}
+            render={({ field, fieldState }) => (
+              <>
+                <TextField
+                  label="What is the total budget for the carbon footprint reduction project?"
+                  id="outlined-helperText"
+                  required
+                  fullWidth
+                  margin="normal"
+                  size="small"
+                  InputProps={{
+                    style: {
+                      color: "black",
+                      fontWeight: "bold"
+                    }
+                  }}
+                  sx={{ marginBottom: 0 }}
+                  {...field}
+                  error={Boolean(errors?.projectEstimate)}
+                  onBlur={() => trigger("projectEstimate")}
+                />
+                {errors?.projectEstimate?.message && (
+                  <FormHelperText error={Boolean(errors?.projectEstimate)}>
+                    {htmlText.thisFieldIsRequired}
+                  </FormHelperText>
+                )}
+              </>
+            )}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <FormControl
+            fullWidth
+            required
+            id="outlined-helperText"
+            size="small"
+            margin="normal"
+          >
+            <InputLabel>What percentage of the project’s budget is financed through carbon credit revenues?</InputLabel>
+            <Controller
+              name="projectfinancing"
+              control={control}
+              rules={{ required: htmlText.thisFieldIsRequired }}
+              render={({ field, fieldState }) => (
+                <>
+                  <Select
+                    value={projectFinancing || null}
+                    onChange={(event) => { setProjectFinancing(event.target.value) }}
+                    style={{ color: "black", fontWeight: "bold" }}
+                    label="Does the project exceed regulatory requirements in your sector or region?"
+                    {...field}
+                    error={Boolean(errors?.projectFinancing)}
+                    onBlur={() => trigger("projectFinancing")}
+                  >
+                    <MenuItem value="0-25%" style={{ color: "black", fontWeight: "bold" }}>0-25%</MenuItem>
+                    <MenuItem value="26-50%" style={{ color: "black", fontWeight: "bold" }}>26-50%</MenuItem>
+                    <MenuItem value="51-75%" style={{ color: "black", fontWeight: "bold" }}>51-75%</MenuItem>
+                    <MenuItem value="76-100%" style={{ color: "black", fontWeight: "bold" }}>76-100%</MenuItem>
+                  </Select>
+                  {errors?.projectFinancing?.message && (
+                    <FormHelperText error={Boolean(errors?.projectFinancing)}>
                       {htmlText.thisFieldIsRequired}
                     </FormHelperText>
                   )}

@@ -1,5 +1,5 @@
 :root {
-  --clr-primary: #14490A;
+  --clr-primary: #540676;
   --clr-danger: #ff7782;
   --clr-success: #41f1b6;
   --clr-white: #ffffff;
@@ -27,8 +27,9 @@ nav {
   margin-left: 18%;
   width: 79.5%;
   z-index: 1;
-  border: 1px solid green;
+  border: 1px solid #540676;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 var(--clr-primary);
 }
 
 nav .nav-menu {

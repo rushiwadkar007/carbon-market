@@ -1,5 +1,5 @@
 :root {
-  --clr-primary: #14490a;
+  --clr-primary: #540676;
   --clr-danger: #461dfe;
   --clr-success: #41f1b6;
   --clr-white: #ffffff;
@@ -20,7 +20,7 @@
   --box-shadow: 0.2rem 3 rem var(--clr-ligth);
   --clr-btn: #83b1e1;
   --primary-green: #016a70;
-  --primary-blue: #14490a;
+  --primary-blue: #540676;
   --secondary-process-cyan: #b0d9b1;
   --blue-289: #002244;
   --grey-1: #e6e7e8;
@@ -35,13 +35,12 @@
   --document-nav-padding: 1rem;
 }
 .carbonListing {
-  display: flex;
   position: relative;
-  margin-top: 65px;
-  display: flex;
-  width: 141%;
-  margin-left: -50px;
-  height: 110%;
+    margin-top: 65px;
+    display: flex;
+    width: 145%;
+    margin-left: -50px;
+    height: 110%;
 }
 
 .carbonListing .sidebar {
@@ -61,7 +60,7 @@
   padding: 15px;
   box-shadow: 0 4px 8px 0 var(--clr-primary);
   border: 1px solid var(--clr-primary);
-  height: 320px;
+  height: 335px;
 }
 
 .carbonListing .sidebar:hover {
@@ -76,7 +75,7 @@
   padding: 15px;
   box-shadow: 0 4px 8px 0 var(--clr-primary);
   border: 1px solid var(--clr-primary);
-  height: 320px;
+  height: 335px;
 }
 
 .carbonListing .form-step {

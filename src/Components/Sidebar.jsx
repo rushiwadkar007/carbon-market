@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-const Sidebar = () => {
+const Sidebar = (props) => {
+  console.log("isClicked ", props.clickEvent);
   const location = useLocation();
   const { pathname } = location;
   const splitLocation = pathname.split("/");
   const [closeClicked, setCloseClicked] = useState(false);
-  console.log("closeClicked ", closeClicked);
+  const [sideBarClicked, setSideBarClicked] = useState(true);
+  console.log("sideBarClicked ", sideBarClicked);
   return (
     <div>
       <aside>
@@ -32,6 +34,7 @@ const Sidebar = () => {
                   marginLeft: "10px",
                   transition: closeClicked && "all 1s ease-in",
                 }}
+                onClick={() =>setSideBarClicked(!sideBarClicked)}
               >
                 {" "}
                 arrow_back_ios{" "}
@@ -44,6 +47,7 @@ const Sidebar = () => {
                   marginLeft: "10px",
                   transition: closeClicked && "all 1s ease-in",
                 }}
+                onClick={() =>setSideBarClicked(!sideBarClicked)}
               >
                 deployed_code
               </span>

@@ -10,6 +10,7 @@ import UploadImage from './Forms/UploadImage';
 import ReviewForm from './Forms/ReviewForm';
 import "./carbonListing.css";
 import ThankYou from './Forms/ThankYou';
+import "./Forms/thankYou.css";
 const formArray = [
     {
         id: 0,
@@ -29,20 +30,20 @@ const formArray = [
         heading: "Upload Your Project Images",
         component: <UploadImage />
     },
-
     {
         id: 3,
         name: "Review & Submit",
         heading: "Confirm Your Details",
-        component: <ReviewForm/>,
+        component: <ReviewForm />,
     },
     {
         id: 4,
         name: "Thank You Note!",
-        heading: "Thank YOU FOR SUBMITTING YOUR PROPOSAL!"
+        component: <ThankYou />
     }
 ];
-const CarbonListing = () => {
+const CarbonListing = (props) => {
+    console.log("click event carbon listing ", props.clickEvent)
     const methods = useForm();
     const [currentForm, setCurrentForm] = useState(0);
     console.log("currentForm ", currentForm)
@@ -71,7 +72,12 @@ const CarbonListing = () => {
         "carbonreductionway",
         "thirdpartycertificationdone",
         "thirdpartycertification",
-        "projectmonitoring"
+        "projectmonitoring",
+        "projectlifespan",
+        "projectoccurance",
+        "regrequirements",
+        "projectEstimate",
+        "projectfinancing"
     ];
 
     const personalDetailsValues = [
@@ -91,7 +97,7 @@ const CarbonListing = () => {
             let flag = true;
             for (let i = 0; i < personalDetailsValues.length; i++) {
                 let val = obj[personalDetailsValues[i]];
-                console.log("val ===>>>",val)
+                console.log("val ===>>>", val)
                 if (!val || val.length < 1) {
                     flag = false;
                 }
@@ -185,14 +191,14 @@ const CarbonListing = () => {
                         <form method="POST" className='form'>
                             {formArray[currentForm].component}
                             <div className="nav-buttons">
-                                {currentForm > 0 && (
+                                {currentForm !== 4 && (currentForm > 0 && (
                                     <button className="nav-back" onClick={handleBack}>
                                         {/* <KeyboardBackspaceIcon /> */}
-                                         Back
+                                        Back
                                     </button>
-                                )}
+                                ))}
 
-                                {currentForm === formArray.length - 1 ? (
+                                {currentForm !== 4 && (currentForm === formArray.length - 1 ? (
                                     <button
                                         className="nav-next"
                                         onClick={handleConfirm}
@@ -204,7 +210,7 @@ const CarbonListing = () => {
                                     <button className="nav-next" onClick={handleContinue}>
                                         Continue
                                     </button>
-                                )}
+                                ))}
                             </div>
                         </form>
                     </FormProvider>
